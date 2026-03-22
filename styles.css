@@ -118,7 +118,7 @@ ul { list-style: none; }
    ============================================ */
 .hero {
   position: relative;
-  background: url('https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat;
+  background: url('IMG_0953.jpeg') center center / cover no-repeat;
   color: var(--color-text-white);
   padding: 120px 0 130px;
   text-align: center;
