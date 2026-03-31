@@ -399,15 +399,29 @@
               <span><strong>I agree to receive SMS text messages, MMS messages, and phone calls</strong> (including marketing, transactional, property updates, offers, and follow-ups) from Melo Haven Real Estate Solutions at the phone number provided, including messages sent by autodialer. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to cancel, HELP for help. View our <a href="privacy-policy.html" style="color: #2563eb; text-decoration: underline;">Privacy Policy</a> &amp; <a href="terms-of-service.html" style="color: #2563eb; text-decoration: underline;">Terms of Service</a>.</span>
             </label>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-full">Get My Cash Offer</button>
+          <button type="submit" id="submit-btn" class="btn btn-primary btn-lg btn-full" disabled style="opacity: 0.4; cursor: not-allowed;">You must agree to SMS/Call consent above</button>
           <p class="form-disclaimer">By submitting this form, you confirm you are at least 18 years of age. You must check the consent box above to submit this form. Melo Haven Holdings LLC d/b/a Melo Haven Real Estate Solutions will send SMS text messages, MMS messages, and phone calls to the number provided, including marketing and transactional messages sent by autodialer. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help. Melo Haven Holdings LLC and mobile carriers are not liable for delayed or undelivered messages. View our <a href="privacy-policy.html" style="color: #2563eb; text-decoration: underline;">Privacy Policy</a> &amp; <a href="terms-of-service.html" style="color: #2563eb; text-decoration: underline;">Terms of Service</a>.</p>
         </form>
         <script>
+          var cb = document.getElementById('sms-consent');
+          var btn = document.getElementById('submit-btn');
+          cb.addEventListener('change', function() {
+            if (cb.checked) {
+              btn.disabled = false;
+              btn.textContent = 'Get My Cash Offer';
+              btn.style.opacity = '1';
+              btn.style.cursor = 'pointer';
+            } else {
+              btn.disabled = true;
+              btn.textContent = 'You must agree to SMS/Call consent above';
+              btn.style.opacity = '0.4';
+              btn.style.cursor = 'not-allowed';
+            }
+          });
           document.getElementById('lead-form').addEventListener('submit', function(e) {
-            var cb = document.getElementById('sms-consent');
             if (!cb.checked) {
               e.preventDefault();
-              alert('You must agree to receive SMS/MMS messages and phone calls before submitting this form. Please check the required consent box.');
+              alert('You must agree to receive SMS/MMS messages and phone calls before submitting this form.');
               cb.focus();
               return false;
             }
