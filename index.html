@@ -393,14 +393,26 @@
             </div>
           </div>
           <div class="form-group full-width" style="margin-top: 8px;">
-            <label class="consent-label" style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 0.85rem; line-height: 1.5; color: #6b7280;">
-              <input type="checkbox" id="sms-consent" name="sms_consent" required style="margin-top: 4px; min-width: 18px; min-height: 18px; accent-color: #2563eb; cursor: pointer;">
-              <span>I agree to receive text messages and phone calls from Melo Haven Real Estate Solutions at the phone number provided, including messages sent by autodialer. Consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies. Reply STOP to cancel, HELP for help. View our <a href="privacy-policy.html" style="color: #2563eb; text-decoration: underline;">Privacy Policy</a> &amp; <a href="terms-of-service.html" style="color: #2563eb; text-decoration: underline;">Terms of Service</a>.</span>
+            <p style="margin: 0 0 6px; font-size: 0.8rem; color: #dc2626; font-weight: 600;">* Required to submit</p>
+            <label class="consent-label" style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 0.85rem; line-height: 1.5; color: #333; border: 2px solid #2563eb; border-radius: 8px; padding: 12px; background: #f0f5ff;">
+              <input type="checkbox" id="sms-consent" name="sms_consent" required style="margin-top: 4px; min-width: 20px; min-height: 20px; accent-color: #2563eb; cursor: pointer;">
+              <span><strong>I agree to receive SMS text messages, MMS messages, and phone calls</strong> (including marketing, transactional, property updates, offers, and follow-ups) from Melo Haven Real Estate Solutions at the phone number provided, including messages sent by autodialer. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to cancel, HELP for help. View our <a href="privacy-policy.html" style="color: #2563eb; text-decoration: underline;">Privacy Policy</a> &amp; <a href="terms-of-service.html" style="color: #2563eb; text-decoration: underline;">Terms of Service</a>.</span>
             </label>
           </div>
           <button type="submit" class="btn btn-primary btn-lg btn-full">Get My Cash Offer</button>
-          <p class="form-disclaimer">By submitting this form, you confirm you are at least 18 years of age and consent to receive marketing and transactional text messages (including property updates, offers, and follow-ups) and calls from Melo Haven Holdings LLC d/b/a Melo Haven Real Estate Solutions at the phone number provided, including messages sent by autodialer. Consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies. Reply STOP to cancel, HELP for help. Melo Haven Holdings LLC and mobile carriers are not liable for delayed or undelivered messages. View our <a href="privacy-policy.html" style="color: #2563eb; text-decoration: underline;">Privacy Policy</a> &amp; <a href="terms-of-service.html" style="color: #2563eb; text-decoration: underline;">Terms of Service</a>.</p>
+          <p class="form-disclaimer">By submitting this form, you confirm you are at least 18 years of age. You must check the consent box above to submit this form. Melo Haven Holdings LLC d/b/a Melo Haven Real Estate Solutions will send SMS text messages, MMS messages, and phone calls to the number provided, including marketing and transactional messages sent by autodialer. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help. Melo Haven Holdings LLC and mobile carriers are not liable for delayed or undelivered messages. View our <a href="privacy-policy.html" style="color: #2563eb; text-decoration: underline;">Privacy Policy</a> &amp; <a href="terms-of-service.html" style="color: #2563eb; text-decoration: underline;">Terms of Service</a>.</p>
         </form>
+        <script>
+          document.getElementById('lead-form').addEventListener('submit', function(e) {
+            var cb = document.getElementById('sms-consent');
+            if (!cb.checked) {
+              e.preventDefault();
+              alert('You must agree to receive SMS/MMS messages and phone calls before submitting this form. Please check the required consent box.');
+              cb.focus();
+              return false;
+            }
+          });
+        </script>
       </div>
     </div>
   </section>
