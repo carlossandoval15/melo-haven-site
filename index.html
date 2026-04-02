@@ -134,6 +134,8 @@
     ]
   }
   </script>
+  <!-- GHL Tracking Script -->
+  <script src="https://links.digivox.agency/js/external-tracking.js" data-tracking-id="tk_261bd17c0ebc4a7494d67b252149a992"></script>
 </head>
 <body>
 
@@ -347,12 +349,7 @@
           or point the action to REsimpli's webhook URL.
           =============================================
         -->
-        <form id="lead-form" action="https://formsubmit.co/melohavensolutions@gmail.com" method="POST">
-          <!-- FormSubmit config -->
-          <input type="hidden" name="_subject" value="New Lead from MeloHaven Website">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://melohavensolutions.com/thank-you.html">
+        <form id="lead-form" action="https://melohavensolutions.com/thank-you.html" method="GET" onsubmit="return submitToGHL(event)">
           <!-- Honeypot -->
           <input type="text" name="_honey" style="display:none">
 
