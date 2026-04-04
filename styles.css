@@ -94,9 +94,9 @@ ul { list-style: none; }
   align-items: center;
 }
 .logo img {
-  height: 52px;
+  height: 80px;
   width: auto;
-  mix-blend-mode: screen;
+  object-fit: contain;
 }
 .header-phone {
   color: var(--color-text-white);
