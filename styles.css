@@ -399,6 +399,153 @@ ul { list-style: none; }
 }
 
 /* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+.testimonial-card {
+  background: var(--color-bg-alt);
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--color-gold);
+}
+.testimonial-stars {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.testimonial-text {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.testimonial-author {
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+}
+.testimonial-author strong {
+  color: var(--color-primary-dark);
+}
+
+/* ============================================
+   LOCATION PAGES
+   ============================================ */
+.location-hero {
+  background: linear-gradient(135deg, rgba(15,38,64,0.9) 0%, rgba(26,58,92,0.85) 100%);
+  color: var(--color-text-white);
+  padding: 100px 0 80px;
+  text-align: center;
+}
+.location-hero h1 {
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.location-hero p {
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto 30px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+}
+.location-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+.location-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 40px 0 16px;
+}
+.location-content h2:first-of-type { margin-top: 0; }
+.location-content p {
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.location-content ul {
+  margin: 12px 0 20px 24px;
+  list-style: disc;
+}
+.location-content ul li {
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+.location-cta-box {
+  background: var(--color-bg-alt);
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius);
+  padding: 40px;
+  text-align: center;
+  margin: 48px 0;
+}
+.location-cta-box h3 {
+  font-size: 1.3rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 12px;
+}
+.location-cta-box p {
+  margin-bottom: 20px;
+}
+
+/* Blog article page styles */
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+.article-content h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.article-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+.article-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 36px 0 14px;
+}
+.article-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 28px 0 12px;
+}
+.article-content p {
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.article-content ul {
+  margin: 12px 0 20px 24px;
+  list-style: disc;
+}
+.article-content ul li {
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+/* ============================================
    CONTACT FORM
    ============================================ */
 .contact { background: var(--color-bg-alt); }

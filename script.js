@@ -26,6 +26,7 @@ async function submitLead(e) {
   if (honey && honey.value) return false;
 
   const name    = form.querySelector('#name').value.trim();
+  const phone   = form.querySelector('#phone').value.trim();
   const email   = form.querySelector('#email').value.trim();
   const type    = form.querySelector('#property-type').value;
   const address = form.querySelector('#address').value.trim();
@@ -36,6 +37,7 @@ async function submitLead(e) {
     subject: 'New Lead — Melo Haven Website',
     from_name: 'Melo Haven Website',
     name,
+    phone: phone || 'Not provided',
     email: email || 'Not provided',
     property_type: type,
     property_address: address,
